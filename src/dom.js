@@ -26,7 +26,7 @@ const dom = (() => {
     searchBarContainer.innerHTML = `
       <label class="mb-0 pt-1 mr-1" for="city-name">Search City:</label>
       <div class=" d-flex">
-        <input class="rounded-left" type="search" name="city-name" id="">
+        <input class="rounded-left" type="search" name="city-name" id="" required>
         <button class="rounded-right">
           <i class="fa fa-search" aria-hidden="true"></i>
         </button>
@@ -68,7 +68,31 @@ const dom = (() => {
     return footerContainer;
   };
 
-  return { createNav, createMainContentContainer, createFooter };
+  const displayInstructionText = () => {
+    const div = document.createElement('div');
+    div.classList.add("w-75", "mx-auto", "my-5", "p-5", "bg-secondary", "rounded")
+    div.innerHTML = `
+      <p class="text-center h4 text-light">
+       Enter a city name in the search bar to see the weather condition in that city.
+      </p>
+    `;
+
+    return div;
+  }
+
+  const displayErrorText = () => {
+    const div = document.createElement('div');
+    div.classList.add("w-75", "mx-auto", "my-5", "p-5", "bg-secondary", "rounded")
+    div.innerHTML = `
+      <p class="text-center h4 text-light">
+       Oops, city not found. Please ensure that you've spelt the name of the city correctly.
+      </p>
+    `;
+
+    return div;
+  }
+
+  return { createNav, createMainContentContainer, createFooter, displayInstructionText, displayErrorText };
 })();
 
 export default dom;

@@ -10,3 +10,6 @@ import api from './weatherAPI'
 document.body.appendChild(dom.createNav())
 document.body.appendChild(dom.createMainContentContainer())
 document.body.appendChild(dom.createFooter())
+
+const mainContentDiv = document.querySelector('.main-content');
+mainContentDiv.appendChild(dom.displayErrorText())
