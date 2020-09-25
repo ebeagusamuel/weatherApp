@@ -13,29 +13,32 @@ body {
   right: 0;
   z-index: 9;
   background-color: rgb(75, 66, 66);
+
+  a {
+    color: antiquewhite;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
 }
 
-.nav-container a {
-  color: antiquewhite;
-  font-size: 1.5rem;
-  font-weight: 700;
-}
+.search-bar-container {
+  label {
+    color: antiquewhite;
+    font-size: 1rem;
+    font-weight: 600;
+  }
 
-.search-bar-container label {
-  color: antiquewhite;
-  font-size: 1rem;
-  font-weight: 600;
-}
+  input {
+    border: none;
+    width: 80%;
+    height: 30px;
+  }
 
-.search-bar-container input {
-  border: none;
-  width: 80%;
-  height: 30px;
-}
-.search-bar-container button{
-  border: none;
-  width: 20%;
-  height: 30px;
+  button {
+    border: none;
+    width: 20%;
+    height: 30px;
+  }
 }
 
 .main-content {
@@ -45,34 +48,42 @@ body {
   background-image: url(./bg-img.jpg);
   background-position: center center;
   background-size: cover;
-}
 
-.city-weather-info-div {
-  color: rgb(255, 0, 0);
-}
+  .city-weather-info-div {
+    color: chartreuse;
 
-.city-name h2 {
-  font-size: 2rem;
-}
+    .city-name {
+      h2 {
+        font-size: 2rem;
+      }
+    }
 
-.temp-div h2 {
-  font-size: 2rem;
-  font-weight: 800;
-}
+    .temp-div {
+      h2 {
+        font-size: 2rem;
+        font-weight: 800;
+      }
+    }
 
-.cloud-status-div h2{
-  font-size: 2rem;
-}
+    .cloud-status-div {
+      h2 {
+        font-size: 2rem;
+      }
+    }
+  }
 
-.property {
-  font-size: 1rem;
-  color: aquamarine;
-}
+  .more-info-div {
+    .property {
+      font-size: 1rem;
+      color: aquamarine;
+    }
 
-.value {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: chartreuse;
+    .value {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: chartreuse;
+    }
+  }
 }
 
 footer {

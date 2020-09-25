@@ -69,8 +69,15 @@ const dom = (() => {
   };
 
   const displayInstructionText = () => {
-    const div = document.createElement('div');
-    div.classList.add("w-75", "mx-auto", "my-5", "p-5", "bg-secondary", "rounded")
+    const div = document.createElement("div");
+    div.classList.add(
+      "w-75",
+      "mx-auto",
+      "my-5",
+      "p-5",
+      "bg-secondary",
+      "rounded"
+    );
     div.innerHTML = `
       <p class="text-center h4 text-light">
        Enter a city name in the search bar to see the weather condition in that city.
@@ -78,11 +85,18 @@ const dom = (() => {
     `;
 
     return div;
-  }
+  };
 
   const displayErrorText = () => {
-    const div = document.createElement('div');
-    div.classList.add("w-75", "mx-auto", "my-5", "p-5", "bg-secondary", "rounded")
+    const div = document.createElement("div");
+    div.classList.add(
+      "w-75",
+      "mx-auto",
+      "my-5",
+      "p-5",
+      "bg-secondary",
+      "rounded"
+    );
     div.innerHTML = `
       <p class="text-center h4 text-light">
        Oops, city not found. Please ensure that you've spelt the name of the city correctly.
@@ -90,55 +104,63 @@ const dom = (() => {
     `;
 
     return div;
-  }
+  };
 
   const displayWeatherInfo = (dataObj) => {
-    const div = document.createElement('div');
+    const div = document.createElement("div");
     div.innerHTML = `
     <div class="city-weather-info-div">
       <div class="city-name  ml-3">
-        <h2 class="mb-1">${dataObj['name']}, ${dataObj['country']}<i class="fas fa-map-marker-alt ml-2"></i></h2>
+        <h2 class="mb-1">${dataObj.name}, ${dataObj.country}<i class="fas fa-map-marker-alt ml-2"></i></h2>
       </div>
       <div class="temp-div ml-4">
-        <h2 class="mb-1">${dataObj['temp']}°C</h2>
+        <h2 data-temp="kelvin" id="temp" class="mb-1">${dataObj.temp}K</h2>
       </div>
       <div class="cloud-status-div ml-3">
-        <h2>${dataObj['weather']}</h2>
+        <h2>${dataObj.weather}</h2>
       </div>
+      <button class="convertTemp ml-3">Convert To °C</button>
     </div>
 
     <div class="more-info-div row text-center mt-5 mx-auto">
       <div class="col-4">
         <p class='property'>Min temp</p>
-        <p class="value">${dataObj['minTemp']}<span>°C</span></p>
+        <p id="minTemp" class="value">${dataObj.minTemp}K</p>
       </div>
       <div class="col-4">
         <p class='property'>Max temp</p>
-        <p class="value">${dataObj['maxTemp']}<span>°C</span></p>
+        <p id="maxTemp" class="value">${dataObj.maxTemp}K</p>
       </div>
       <div class="col-4">
         <p class='property'>Humdity</p>
-        <p class="value">${dataObj['humidity']}%</p>
+        <p class="value">${dataObj.humidity}%</p>
       </div>
       <div class="col-4">
         <p class='property'>Wind speed</p>
-        <p class="value">${dataObj['windSpeed']}m/s</p>
+        <p class="value">${dataObj.windSpeed}m/s</p>
       </div>
       <div class="col-4">
         <p class='property'>Pressure</p>
-        <p class="value">${dataObj['pressure']}hPa</p>
+        <p class="value">${dataObj.pressure}hPa</p>
       </div>
       <div class="col-4">
         <p class='property'>Weather</p>
-        <p class="value">${dataObj['weather']}</p>
+        <p class="value">${dataObj.weather}</p>
       </div>
     </div>
     `;
 
     return div;
-  }
+  };
 
-  return { createNav, createMainContentContainer, createFooter, displayInstructionText, displayErrorText , displayWeatherInfo};
+  return {
+    createNav,
+    createMainContentContainer,
+    createFooter,
+    displayInstructionText,
+    displayErrorText,
+    displayWeatherInfo,
+  };
 })();
 
 export default dom;
