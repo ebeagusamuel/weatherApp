@@ -1,26 +1,26 @@
 const dom = (() => {
   const createNav = () => {
-    const nav = document.createElement("nav");
+    const nav = document.createElement('nav');
     nav.classList.add(
-      "nav-container",
-      "d-flex",
-      "flex-column",
-      "justify-content-between",
-      "flex-md-row",
-      "py-3",
-      "px-3"
+      'nav-container',
+      'd-flex',
+      'flex-column',
+      'justify-content-between',
+      'flex-md-row',
+      'py-3',
+      'px-3',
     );
 
-    const appNameAnchor = document.createElement("a");
-    appNameAnchor.classList.add("text-decoration-none");
-    appNameAnchor.textContent = "weatherApp";
-    appNameAnchor.href = "#";
+    const appNameAnchor = document.createElement('a');
+    appNameAnchor.classList.add('text-decoration-none');
+    appNameAnchor.textContent = 'weatherApp';
+    appNameAnchor.href = '#';
 
-    const searchBarContainer = document.createElement("div");
+    const searchBarContainer = document.createElement('div');
     searchBarContainer.classList.add(
-      "d-flex",
-      "align-content-center",
-      "search-bar-container"
+      'd-flex',
+      'align-content-center',
+      'search-bar-container',
     );
 
     searchBarContainer.innerHTML = `
@@ -40,22 +40,22 @@ const dom = (() => {
   };
 
   const createMainContentContainer = () => {
-    const mainContainer = document.createElement("div");
-    mainContainer.classList.add("main-content");
+    const mainContainer = document.createElement('div');
+    mainContainer.classList.add('main-content');
 
     return mainContainer;
   };
 
   const createFooter = () => {
-    const footerContainer = document.createElement("footer");
-    footerContainer.classList.add("py-2");
+    const footerContainer = document.createElement('footer');
+    footerContainer.classList.add('py-2');
 
-    const footerLinksContainer = document.createElement("div");
+    const footerLinksContainer = document.createElement('div');
     footerLinksContainer.classList.add(
-      "w-25",
-      "d-flex",
-      "justify-content-between",
-      "mx-auto"
+      'w-25',
+      'd-flex',
+      'justify-content-between',
+      'mx-auto',
     );
     footerLinksContainer.innerHTML = `
       <a href="https://github.com/ebeagusamuel", target="blank"><i class="fab fa-github"></i></a>
@@ -69,14 +69,14 @@ const dom = (() => {
   };
 
   const displayInstructionText = () => {
-    const div = document.createElement("div");
+    const div = document.createElement('div');
     div.classList.add(
-      "w-75",
-      "mx-auto",
-      "my-5",
-      "p-5",
-      "bg-secondary",
-      "rounded"
+      'w-75',
+      'mx-auto',
+      'my-5',
+      'p-5',
+      'bg-secondary',
+      'rounded',
     );
     div.innerHTML = `
       <p class="text-center h4 text-light">
@@ -88,14 +88,14 @@ const dom = (() => {
   };
 
   const displayErrorText = () => {
-    const div = document.createElement("div");
+    const div = document.createElement('div');
     div.classList.add(
-      "w-75",
-      "mx-auto",
-      "my-5",
-      "p-5",
-      "bg-secondary",
-      "rounded"
+      'w-75',
+      'mx-auto',
+      'my-5',
+      'p-5',
+      'bg-secondary',
+      'rounded',
     );
     div.innerHTML = `
       <p class="text-center h4 text-light">
@@ -107,7 +107,7 @@ const dom = (() => {
   };
 
   const displayWeatherInfo = (dataObj) => {
-    const div = document.createElement("div");
+    const div = document.createElement('div');
     div.innerHTML = `
     <div class="city-weather-info-div">
       <div class="city-name  ml-3">
