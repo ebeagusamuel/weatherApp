@@ -1,0 +1,47 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "A weather application built with javascript and the open weather map API",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development",
+    "watch": "webpack --watch",
+    "start": "webpack-dev-server --mode development --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ebeagusamuel/weatherApp.git"
+  },
+  "author": "Ebeagu Samuel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ebeagusamuel/weatherApp/issues"
+  },
+  "homepage": "https://github.com/ebeagusamuel/weatherApp#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.0.0",
+    "css-loader": "^4.3.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "file-loader": "^6.1.0",
+    "node-sass": "^4.14.1",
+    "postcss-loader": "^4.0.2",
+    "sass-loader": "^10.0.2",
+    "style-loader": "^1.2.1",
+    "stylelint": "^13.3.3",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-csstree-validator": "^1.8.0",
+    "stylelint-scss": "^3.17.2",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
+    "bootstrap": "^4.5.2",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
+  }
+}
