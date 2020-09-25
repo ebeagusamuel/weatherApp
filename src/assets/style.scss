@@ -1,1 +1,39 @@
 @import "~bootstrap/scss/bootstrap";
+
+html,
+body {
+  font-size: 16px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  background-color: rgb(75, 66, 66);
+}
+
+.nav-container a {
+  color: antiquewhite;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.search-bar-container label {
+  color: antiquewhite;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.search-bar-container input {
+  border: none;
+  width: 80%;
+  height: 30px;
+}
+.search-bar-container button{
+  border: none;
+  width: 20%;
+  height: 30px;
+}
