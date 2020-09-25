@@ -15,11 +15,12 @@ const api = (() => {
       dataObj['pressure'] = jsonObj['main']['pressure'];
       dataObj['windSpeed'] = jsonObj['wind']['speed'];
       dataObj['weather'] = jsonObj['weather'][0]['description'];
+      dataObj['name'] = jsonObj['name']
+      dataObj['country'] = jsonObj['sys']['country']
       dataObj['cod'] = jsonObj['cod'] 
-      console.log(dataObj)
     }
 
-    if(jsonObj['cod'] === 404){
+    if(jsonObj['cod'] === '404'){
       dataObj['cod'] = jsonObj['cod']
       dataObj['msg'] = jsonObj['message']
     }
