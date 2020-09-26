@@ -1,5 +1,12 @@
 import './assets/style.scss';
 import './assets/bg-img.jpg';
+import './assets/bgCloudy.jpg';
+import './assets/bgFoggy.jpg';
+import './assets/bgRain.jpg';
+import './assets/bgSnowy.jpg';
+import './assets/bgStorm.jpg';
+import './assets/bgSunny.jpg';
+import './assets/bgClearsky.jpg';
 import '@fortawesome/fontawesome-free/js/fontawesome';
 import '@fortawesome/fontawesome-free/js/solid';
 import '@fortawesome/fontawesome-free/js/regular';
@@ -21,38 +28,6 @@ function clearMainContentDiv() {
   }
 }
 
-function convertTemp(element) {
-  const temp = document.getElementById('temp');
-
-  if (temp.getAttribute('data-temp') === 'kelvin') {
-    temp.setAttribute('data-temp', 'celcius');
-    element.textContent = 'Convert to K';
-
-    const kelvinTemp = api.dataObj.temp;
-    const kelvinMinTemp = api.dataObj.minTemp;
-    const kelvinMaxTemp = api.dataObj.maxTemp;
-
-    const celciusTemp = tempConverter(kelvinTemp);
-    const celciusMinTemp = tempConverter(kelvinMinTemp);
-    const celciusMaxTemp = tempConverter(kelvinMaxTemp);
-
-    temp.textContent = celciusTemp;
-    document.getElementById('minTemp').textContent = celciusMinTemp;
-    document.getElementById('maxTemp').textContent = celciusMaxTemp;
-  } else {
-    temp.setAttribute('data-temp', 'kelvin');
-    element.textContent = 'Convert to °C';
-
-    const kelvinTemp = `${api.dataObj.temp}K`;
-    const kelvinMinTemp = `${api.dataObj.minTemp}K`;
-    const kelvinMaxTemp = `${api.dataObj.maxTemp}K`;
-
-    temp.textContent = kelvinTemp;
-    document.getElementById('minTemp').textContent = kelvinMinTemp;
-    document.getElementById('maxTemp').textContent = kelvinMaxTemp;
-  }
-}
-
 const searchButton = document.querySelector('.searchButton');
 searchButton.addEventListener('click', async () => {
   const cityName = document.getElementById('city-name').value;
@@ -65,7 +40,7 @@ searchButton.addEventListener('click', async () => {
 
     const convertTempButton = document.querySelector('.convertTemp');
     convertTempButton.addEventListener('click', () => {
-      convertTemp(convertTempButton);
+      tempConverter(convertTempButton);
     });
   }
 

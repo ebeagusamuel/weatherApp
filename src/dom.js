@@ -69,6 +69,7 @@ const dom = (() => {
   };
 
   const displayInstructionText = () => {
+    document.querySelector('.main-content').classList.add('default-bg');
     const div = document.createElement('div');
     div.classList.add(
       'w-75',
@@ -149,6 +150,27 @@ const dom = (() => {
       </div>
     </div>
     `;
+
+    const weather = dataObj.weather.trim().toLowerCase();
+    const container = document.querySelector('.main-content');
+    container.className = '';
+    if (weather.includes('rain') || weather.includes('shower')) {
+      container.classList.add('main-content', 'bg-rain');
+    } else if (weather.includes('cloud')) {
+      container.classList.add('main-content', 'bg-cloud');
+    } else if (weather.includes('clear')) {
+      container.classList.add('main-content', 'bg-clearsky');
+    } else if (weather.includes('snow') || weather.includes('ice')) {
+      container.classList.add('main-content', 'bg-snow');
+    } else if (weather.includes('storm')) {
+      container.classList.add('main-content', 'bg-storm');
+    } else if (weather.includes('sun') || weather.includes('sunny')) {
+      container.classList.add('main-content', 'bg-sun');
+    } else if (weather.includes('fog')) {
+      container.classList.add('main-content', 'bg-fog');
+    } else {
+      container.classList.add('main-content', 'default-bg');
+    }
 
     return div;
   };

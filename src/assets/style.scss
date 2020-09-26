@@ -45,7 +45,6 @@ body {
   padding-top: 120px;
   width: 100%;
   height: 100vh;
-  background-image: url(./bg-img.jpg);
   background-position: center center;
   background-size: cover;
 
@@ -94,4 +93,36 @@ footer {
   font-size: 1.5rem;
   font-weight: 600;
   background-color: #000;
+}
+
+.default-bg {
+  background-image: url(./bg-img.jpg);
+}
+
+.bg-rain {
+  background-image: url(./bgRain.jpg);
+}
+
+.bg-sun {
+  background-image: url(./bgSunny.jpg);
+}
+
+.bg-cloud {
+  background-image: url(./bgCloudy.jpg);
+}
+
+.bg-fog {
+  background-image: url(./bgFoggy.jpg);
+}
+
+.bg-clearsky {
+  background-image: url(./bgClearsky.jpg);
+}
+
+.bg-storm {
+  background-image: url(./bgStorm.jpg);
+}
+
+.bg-snow {
+  background-image: url(./bgSnowy.jpg);
 }
