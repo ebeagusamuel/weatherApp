@@ -17,7 +17,7 @@ A weather check application built with JavaScript and the open weather API.
 
 ## Live Website
 
-[Live Link](https://raw.githack.com/ebeagusamuel/weatherApp/feature-branch/dist/index.html)
+[Live Link](https://raw.githack.com/ebeagusamuel/weatherApp/development/dist/index.html)
 
 ## Getting Started
 
