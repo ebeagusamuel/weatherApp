@@ -1,0 +1,128 @@
+@import "~bootstrap/scss/bootstrap";
+
+html,
+body {
+  font-size: 16px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  background-color: rgb(75, 66, 66);
+
+  a {
+    color: antiquewhite;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+}
+
+.search-bar-container {
+  label {
+    color: antiquewhite;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  input {
+    border: none;
+    width: 80%;
+    height: 30px;
+  }
+
+  button {
+    border: none;
+    width: 20%;
+    height: 30px;
+  }
+}
+
+.main-content {
+  padding-top: 120px;
+  width: 100%;
+  height: 100vh;
+  background-position: center center;
+  background-size: cover;
+
+  .city-weather-info-div {
+    color: chartreuse;
+
+    .city-name {
+      h2 {
+        font-size: 2rem;
+      }
+    }
+
+    .temp-div {
+      h2 {
+        font-size: 2rem;
+        font-weight: 800;
+      }
+    }
+
+    .cloud-status-div {
+      h2 {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .more-info-div {
+    .property {
+      font-size: 1rem;
+      color: aquamarine;
+    }
+
+    .value {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: chartreuse;
+    }
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: #000;
+}
+
+.default-bg {
+  background-image: url(./bg-img.jpg);
+}
+
+.bg-rain {
+  background-image: url(./bgRain.jpg);
+}
+
+.bg-sun {
+  background-image: url(./bgSunny.jpg);
+}
+
+.bg-cloud {
+  background-image: url(./bgCloudy.jpg);
+}
+
+.bg-fog {
+  background-image: url(./bgFoggy.jpg);
+}
+
+.bg-clearsky {
+  background-image: url(./bgClearsky.jpg);
+}
+
+.bg-storm {
+  background-image: url(./bgStorm.jpg);
+}
+
+.bg-snow {
+  background-image: url(./bgSnowy.jpg);
+}
